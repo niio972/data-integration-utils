@@ -21,14 +21,15 @@ replacedChars = {
     " ": "",
     "'": "",
     "/": "",
-    "(": "",
+    "+": "",
     ")": "",
-    "=": "_",
-    "+": ""
+    "(": "",
+    "=": "",
+    "°": ""
 }
 
-DIRECTORY_PATH = "/home/yemadje/PROJETS/BigDataGrapes/data/ttl/CSVtoTurtle_112018/toParse/csv_karen"
-OUTPUT_DIRECTORY_PATH = "/home/yemadje/PROJETS/BigDataGrapes/data/ttl/CSVtoTurtle_112018/toParse/csv"
+DIRECTORY_PATH = ""
+OUTPUT_DIRECTORY_PATH = ""
 CSV_PATHS = []
 
 
@@ -51,7 +52,6 @@ for filePath in filePaths:
                 if(firstline):
                     for element in row:
                         if(element.find('date') != -1):
-                            print(element)
                             dateColumn.append(True)
                         else:
                             dateColumn.append(False)
