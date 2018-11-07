@@ -93,10 +93,8 @@ def clean(element, replacedChars, isDateColumn):
         return dateparser.parse(element).strftime(DATE_FORMAT)
     else:
         element = removeNewLine(unidecode.unidecode(element))
-        element = element.replace(" ", "")
-        element = element.replace("'", "")
-        element = element.replace("/", "")
-        element = element.replace("+", "")
+        for replacedChar, char in replacedChars.items():
+                element = element.replace(replacedChar, char)
     return element
 
 
