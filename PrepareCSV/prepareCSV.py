@@ -28,8 +28,8 @@ replacedChars = {
     "°": ""
 }
 
-DIRECTORY_PATH = "/home/charlero/PROJETS/BigDataGrappes/Karen/CSVtoTurtle_102018/toParse/csv"
-OUTPUT_DIRECTORY_PATH = "/home/charlero/PROJETS/BigDataGrappes/Karen/prepareCsv/prepare/output"
+DIRECTORY_PATH = ""
+OUTPUT_DIRECTORY_PATH = ""
 CSV_PATHS = []
 
 
