@@ -21,11 +21,14 @@ replacedChars = {
     " ": "",
     "'": "",
     "/": "",
+    "(": "",
+    ")": "",
+    "=": "_",
     "+": ""
 }
 
-DIRECTORY_PATH = ""
-OUTPUT_DIRECTORY_PATH = ""
+DIRECTORY_PATH = "/home/yemadje/PROJETS/BigDataGrapes/data/ttl/CSVtoTurtle_112018/toParse/csv_karen"
+OUTPUT_DIRECTORY_PATH = "/home/yemadje/PROJETS/BigDataGrapes/data/ttl/CSVtoTurtle_112018/toParse/csv"
 CSV_PATHS = []
 
 
