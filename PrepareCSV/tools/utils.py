@@ -13,11 +13,12 @@ import json
 import sys
 import csv
 import unidecode
-import log as log
+from tools import log
 import datetime
 import dateparser
 
 DATE_FORMAT = '%Y-%m-%d'
+
 
 def serializeDate(self, date):
     """Date object is not serializable by JsonSerializer by default"""
@@ -86,9 +87,9 @@ def readCSV(filePath):
         return spamreader
 
 
-def clean(element, replacedChars):
-    element = removeNewLine(element)
-    if(dateparser.parse(element) != None):
+def clean(element, replacedChars, isDateColumn):
+    element = removeNewLine(element).strip()
+    if(isDateColumn):
         return dateparser.parse(element).strftime(DATE_FORMAT)
     else:
         element = removeNewLine(unidecode.unidecode(element))
@@ -97,3 +98,20 @@ def clean(element, replacedChars):
         element = element.replace("/", "")
         element = element.replace("+", "")
     return element
+
+
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        pass
+
+    try:
+        import unicodedata
+        unicodedata.numeric(s)
+        return True
+    except (TypeError, ValueError):
+        pass
+        return False
+
