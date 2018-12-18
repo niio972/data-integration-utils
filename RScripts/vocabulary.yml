@@ -1,3 +1,19 @@
 "AciditeTotale" : "TotalAcidity"
 "Floraison" : "Flowering"
-"rdf_type Object" : "rdf_type_Object"
+
+#Climatik Data 
+"Amplitude Thermique":"ThermalRange" # degree Celsius
+"GVX":"MWD" #maximal wind direction #degree
+"DH":"WD" #Daily wetness duration # hours and tenth
+"DI":"ID" #Insolation duration #hours and tenth
+"DIC":"CID" # calculated insolation duration #hours and tenth
+"BAC":"ET" #evaporation tray  #millimeters
+"EP":"PE" #Piche evapotranspiration #millimeters
+"ETP":"ETP" # measured evapotranspiration #millimeters
+"ETPP":"PETP" #Penman evapotranspiration #millimeters
+"ETPPC":"CPETP" #Corrected Piche evapotranspiration #millimeters
+"FRAC":"FRAC" #Insolation fraction  #percentage
+"HOX":"XWH" #maximal water height #millimeters
+"HON":"NWH" #minimal water height #millimeters
+"HOM":"MWH" #mean water height #millimeters
+
