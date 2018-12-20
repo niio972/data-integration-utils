@@ -1,126 +1,125 @@
-AciditeTotale 
-	-  TotalAcidity
-Floraison 
-	-  Flowering
+TotalAcidity:
+ - AciditeTotale
+Flowering:
+ - Floraison
 ########################################
 #Climatik Data 
 ########################################
-AN
-	- YEAR
-MOIS
-	- MONTH
-JOUR
-	- DAY
-AMP
-	- RAN #Temperature range Range #degree Celsius
-GVX
-	- MWD #maximal wind direction #degree
-DH
-	- WD #Daily wetness duration # hours and tenths
-DI
-	- ID #Insolation duration #hours and tenths
-DIC
-	- CID # calculated insolation duration #hours and tenths
-BAC
-	- ET #evaporation tray  #millimeters
-EP
-	- PE #Piche evapotranspiration #millimeters
-ETP
-	- ETP # Measured evapotranspiration #millimeters
-ETPP
-	- PETP #Penman evapotranspiration #millimeters
-ETPPC
-	- CPETP #Corrected Piche evapotranspiration #millimeters
-FRAC
-	- FRAC #Insolation fraction  #percentage
-HOX
-	- XWH #maximal water height #millimeters
-HON
-	- NWH #minimal water height #millimeters
-HOM
-	- MWH #mean water height #millimeters
-RR
-	- PH #Precipitation height #millimeters
-UX
-	- XH #Maximal humidity #percentage
-UN
-	- NH #Minimal humidity #percentage
-UM
-	- MH #Mean humidity
-I1N
-	- I1N #Actinothermal index +10cm #degree Celsius
-I1X
-	- I1X #Actinothermal index +10cm (Maximum) #degree Celsius
-I5N
-	- I5N #Actinothermal index +50cm #degree Celsius
-I5X
-	- I5X #Actinothermal index +50cm (Maximum) #degree Celsius
-ITX
-	- XTI #Maximal temperature instant #hours and tenths
-ITN
-	- NTI #Minimal temperature instant #hours and tenths
-IUX
-	- XHI #Maximal humidity instant #hours and tenths
-IUX
-	- NHI #Minimal humidity instant #hours and tenths
-IVX
-	- XWI #Maximal wind instant #hours and tenths
-IRRX
-	- XPII #Maximal precipitation intensity instant #hours and tenths
-RRX
-	- XPI #Maximal precipitation intensity #millimeters
-RG
-	- GR #Global radiation #joules/cm2
-RGC
-	- CGR #Calculated global radiation #joules/cm2
-PAR
-	- PAR #Photosynthetic active radiation #joules/cm2
-TX
-	- XT #Maximal temperature #degree Celsius
-S1X
-	- X1S #Soil maximal teVX:VITESSE MAXIMALE DU VENT (METRES PAR SECONDE)
+YEAR:
+ - AN
+MONTH:
+ - MOIS
+DAY:
+ - JOUR
+RAN:
+ - AMP #Temperature range Range #degree Celsius
+MWD:
+ - GVX #maximal wind direction #degree
+WD:
+ - DH #Daily wetness duration # hours and tenths
+ID:
+ - DI #Insolation duration #hours and tenths
+CID:
+ - DIC # calculated insolation duration #hours and tenths
+ET:
+ - BAC #evaporation tray  #millimeters
+PE:
+ - EP #Piche evapotranspiration #millimeters
+ETP:
+ - ETP # Measured evapotranspiration #millimeters
+PETP:
+ - ETPP #Penman evapotranspiration #millimeters
+CPETP:
+ - ETPPC #Corrected Piche evapotranspiration #millimeters
+FRAC:
+ - FRAC #Insolation fraction  #percentage
+XWH:
+ - HOX #maximal water height #millimeters
+NWH:
+ - HON #minimal water height #millimeters
+MWH:
+ - HOM #mean water height #millimeters
+PH:
+ - RR #Precipitation height #millimeters
+XH:
+ - UX #Maximal humidity #percentage
+NH:
+ - UN #Minimal humidity #percentage
+MH:
+ - UM #Mean humidity
+I1N:
+ - I1N #Actinothermal index +10cm #degree Celsius
+I1X:
+ - I1X #Actinothermal index +10cm (Maximum) #degree Celsius
+I5N:
+ - I5N #Actinothermal index +50cm #degree Celsius
+I5X:
+ - I5X #Actinothermal index +50cm (Maximum) #degree Celsius
+XTI:
+ - ITX #Maximal temperature instant #hours and tenths
+NTI:
+ - ITN #Minimal temperature instant #hours and tenths
+XHI:
+ - IUX #Maximal humidity instant #hours and tenths
+NHI:
+ - IUX #Minimal humidity instant #hours and tenths
+XWI:
+ - IVX #Maximal wind instant #hours and tenths
+XPII:
+ - IRRX #Maximal precipitation intensity instant #hours and tenths
+XPI:
+ - RRX #Maximal precipitation intensity #millimeters
+GR:
+ - RG #Global radiation #joules/cm2
+CGR:
+ - RGC #Calculated global radiation #joules/cm2
+PAR:
+ - PAR #Photosynthetic active radiation #joules/cm2
+XT:
+ - TX #Maximal temperature #degree Celsius
+X1S:
+ - S1X #Soil maximal teVX (VITESSE MAXIMALE DU VENT (METRES PAR SECONDE))
 #mperature at -10cm #degree Celsius
-TN
-	- NT #Minimal temperature #degree Celsius
-S1N
-	- N1S #Soil minimal temperature at -10cm #degree Celsius
-TM
-	- MT #Mean temperature #degree Celsius
-TMC
-	- CMT #Calculated mean temperature #degree Celsius
-S5M
-	-  #Mean soil temperature at -50cm #degree Celsius
-TD
-	- DT #Dew point temperature  #degree Celsius
-U4
-	- H4 #period with  humidity <40% #hours and tenths
-U8
-	- H8 #period with  humidity >80% #hours and tenths
-U9
-	- H9 #period with  humidity >90% #hours and tenths
-TVM
-	- MVP #Mean vapor pressure #millibars
-VET
-	- TEW #total wind East direction # kilometers
-VNT
-	- TNW #total wind Nord direction # kilometers
-VNET
-	- TNEW #total wind nord-east direction # kilometers
-VNWT
-	- TNWW #total wind nord-West direction # kilometers
-VWT
-	- TWW #total wind West direction # kilometers
-VST
-	- TSW #total wind sud direction # kilometers
-VSET
-	- TSEW #total wind sud-east direction # kilometers
-VSWT
-	- TSWW #total wind sud-West direction # kilometers
-VX
-	- SP
-	-  #Maximal wind speed #meters per second
-V
-	- S #Mean wind spead #meters per second
+NT:
+ - TN #Minimal temperature #degree Celsius
+N1S:
+ - S1N #Soil minimal temperature at -10cm #degree Celsius
+MT:
+ - TM #Mean temperature #degree Celsius
+CMT:
+ - TMC #Calculated mean temperature #degree Celsius
+S5M:
+ -  #Mean soil temperature at -50cm #degree Celsius
+DT:
+ - TD #Dew point temperature  #degree Celsius
+H4:
+ - U4 #period with  humidity <40% #hours and tenths
+H8:
+ - U8 #period with  humidity >80% #hours and tenths
+H9:
+ - U9 #period with  humidity >90% #hours and tenths
+MVP:
+ - TVM #Mean vapor pressure #millibars
+TEW:
+ - VET #total wind East direction # kilometers
+TNW:
+ - VNT #total wind Nord direction # kilometers
+TNEW:
+ - VNET #total wind nord-east direction # kilometers
+TNWW:
+ - VNWT #total wind nord-West direction # kilometers
+TWW:
+ - VWT #total wind West direction # kilometers
+TSW:
+ - VST #total wind sud direction # kilometers
+TSEW:
+ - VSET #total wind sud-east direction # kilometers
+TSWW:
+ - VSWT #total wind sud-West direction # kilometers
+SP:
+ - VX #Maximal wind speed #meters per second
+S:
+ - V #Mean wind spead #meters per second
 
 ########################################
 #Field dans vineyard measurements
@@ -128,93 +127,154 @@ V
 #Harvest information 2016 
 #colomn header already in English
 #comment(last column) traduction
-# Vendange égrappé
-# Vendange égrappé et foulée
-# Pulié foliaire
-# Vendange égrappé+foulée extrative so2 8% à 3g/hl
-# Vendange égrappé+Fouloir extraction
-# Vendange égrappé+Foulage extractive
-# Vendange égrappé+Foulée extractive Pellenc
-# Vendange égrappé et fouloir extraction de pellenc
-# Vendange égrappé foulage
-# Thermovinification 70° pendant 20min
+#Vendange égrappé
+#Vendange égrappé et foulée
+#Pulié foliaire
+#Vendange égrappé+foulée extrative so2 8% à 3g/hl
+#Vendange égrappé+Fouloir extraction
+#Vendange égrappé+Foulage extractive
+#Vendange égrappé+Foulée extractive Pellenc
+#Vendange égrappé et fouloir extraction de pellenc
+#Vendange égrappé foulage
+#Thermovinification 70° pendant 20min
 
 #LinkBetween_PlotInformation_HarvestInformation
-systeme_taille
-	- pruningSystem
-piquets
-	- stakes 
-nb_souches
-	- RootstockNumber
-densite_plantation
-	- plantationDensity
+pruning_system:
+ - systeme_taille
+stakes:
+ - piquets #? utile?
+nb_rootstock:
+ - nb_souches
+plantation-density:
+ - densite_plantation
 #orientation
-entre_rangs
-	- inter_rows
-entre_ceps
-	- inter-vinestock
-systeme_irrigation
-	- irrigation_system
-date_install_si
-  -system-settingup-date #date of system set up 
-#label
-cepage
-	- vineVariety
-clone_cepage
-	- vineVarietyClone
-portegreffe
-	- rootstockClone
-clone_portegreffe
-	- rootstock
-surgreffage
-	- doublegrafting
-rang
-	- row
-position_rang
-	- rowPosition
+inter_rows:
+ - entre_rangs
+inter-vinestock:
+ - entre_ceps
+irrigationSystem:
+ - systeme_irrigation
+system-settingup-date: 
+  - date_install_si
+label:
+  - label
+vineVariety:
+ - cepage
+vineVarietyClone:
+ - clone_cepage
+cloneRootstock:
+ - portegreffe
+rootstock:
+ - clone_portegreffe
+doubleGrafting:
+ - surgreffage
+row:
+ - rang
+rowPosition:
+ - position_rang
 #region
-type_sol 
-  -soil_type
 #surface2
-profondeur_sol
-	- soilDepth
-cadastre
-	- landRegister
-type_sol3
-	- soilType
-nom
-  - name
-adresse
-  - adress
-Commentaire
-  - Comment
-sous-parcelle-culturale
-  -subplot
-
-espalier
-guyot
-bois
-	- wood
-fer
-	- iron
-traitement
-	- treatment
+soilDepth:
+ - profondeur_sol
+landRegister:
+ - cadastre
+soilType:
+ - type_sol
+ - type_sol3
+name:
+  - nom
+adress:
+  - adresse
+Comment: 
+  - Commentaire 
+  - commentaire
+  - commentaires
+subplot:
+  - sous-parcelle-culturale
+subexperimentalplot: 
+  - sous-parcelle-experimentale
+espalier:
+  -espalier
+guyot:
+  -guyot
+wood:
+ - bois
+iron:
+ - fer
+treatment:
+ - traitement
 
 #Fr
-variable
-	- variable
-RendementAnnuel
-	- Annualyield
-AciditeTotale
-	- TotalAcidity
+variable:
+ - variable
+annualYield:
+ - RendementAnnuel
+totalAcidity:
+ - AciditeTotale
 #DegreBrix
-Sucres
-	- sugars
-ProductionAnnuelle
-	- AnnualProduction
-AlcoolProbable
-	- ProbableAlcohol
+sugars:
+ - Sucres
+annualProduction:
+ - ProductionAnnuelle
+probableAlcohol:
+ - AlcoolProbable
 #Irrigation
 #pH
+midFlowering:
+  - MiFloraison
+midSofteningRipening: 
+  - MiVeraisonRamollissement
+softeningVeraison: 
+- VeraisonRamollissement
+harvestDate:
+  - DateRecolte
+oneBerryWeight: 
+- Poids1Baie
+#VE_PotentielBaseMoyen ?
+berriesNumber: 
+- NbBaies
+berriesWeight: 
+- PoidsBaies
+object: 
+- objet
+value: 
+- valeur
+operator: 
+- operateur
+file: 
+- fichier
+method:
+- methode
+weighing: 
+- Pesee
+calculation: 
+- Calcul
+abacus: 
+- Abaque
+refractometry: 
+- Refractometrie
+pHMetry: 
+- pHmetrie
+Electrotitrimetrie
+counting: 
+- comptage
+pressureChamber: 
+- ChambreAPression
+electrotitrimetry: 
+- Electrotitrimetrie
+variablesGroup:
+- groupe_variables
+annualGrapeproduction: 
+- ProdRdtRaisinAnnuel
+maturity: 
+- Maturite
+#PotentielBaseMoy_VE?
+phenology: 
+- Phenologie
+hour: 
+- heure
 
+#SO4 = Sélection Oppenheim 4 
 
+#Arnaud: pour le formalisme, je ne savais pas tjrs s'il fallait un tiret ou tout coller avec des majuscules - A vérifier (ex: inter-row)
+#deux mots n'ont pas été traduits car je ne connais pas 
