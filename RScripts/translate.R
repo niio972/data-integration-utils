@@ -9,9 +9,9 @@ library("yaml")
 
 scriptDirectory <- "/home/charlero/PROJETS/BigDataGrappes/Git/data-integration-utils/RScripts"
 vocabularyDirectory <- paste0(scriptDirectory , "/vocabulary.yml")
-# csvFilesDirectory <- paste0(scriptDirectory , "/example")
-csvFilesDirectory <- "/home/charlero/PROJETS/BigDataGrappes/Git/CSVtoTurtle/toParse/csv"
-outputPath <- "/home/charlero/PROJETS/BigDataGrappes/Git/data-integration-utils/RScripts/output"
+csvFilesDirectory <- paste0(scriptDirectory , "/example")
+# csvFilesDirectory <- "/home/charlero/PROJETS/BigDataGrappes/Git/CSVtoTurtle/toParse/csv"
+outputPath <- paste0(scriptDirectory , "/output")
 outpuPrefixFile =""
 
 print(getwd())

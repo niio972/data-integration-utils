@@ -1,66 +1,126 @@
-"AciditeTotale" : "TotalAcidity"
-"Floraison" : "Flowering"
+AciditeTotale 
+	-  TotalAcidity
+Floraison 
+	-  Flowering
 ########################################
 #Climatik Data 
 ########################################
-"AN":"YEAR"
-"MOIS":"MONTH"
-"JOUR":"DAY"
-"AMP":"RAN" #Temperature range Range #degree Celsius
-"GVX":"MWD" #maximal wind direction #degree
-"DH":"WD" #Daily wetness duration # hours and tenths
-"DI":"ID" #Insolation duration #hours and tenths
-"DIC":"CID" # calculated insolation duration #hours and tenths
-"BAC":"ET" #evaporation tray  #millimeters
-"EP":"PE" #Piche evapotranspiration #millimeters
-"ETP":"ETP" # Measured evapotranspiration #millimeters
-"ETPP":"PETP" #Penman evapotranspiration #millimeters
-"ETPPC":"CPETP" #Corrected Piche evapotranspiration #millimeters
-"FRAC":"FRAC" #Insolation fraction  #percentage
-"HOX":"XWH" #maximal water height #millimeters
-"HON":"NWH" #minimal water height #millimeters
-"HOM":"MWH" #mean water height #millimeters
-"RR":"PH" #Precipitation height #millimeters
-"UX":"XH" #Maximal humidity #percentage
-"UN":"NH" #Minimal humidity #percentage
-"UM":"MH" #Mean humidity
-"I1N":"I1N" #Actinothermal index +10cm #degree Celsius
-"I1X":"I1X" #Actinothermal index +10cm (Maximum) #degree Celsius
-"I5N":"I5N" #Actinothermal index +50cm #degree Celsius
-"I5X":"I5X" #Actinothermal index +50cm (Maximum) #degree Celsius
-"ITX":"XTI" #Maximal temperature instant #hours and tenths
-"ITN":"NTI" #Minimal temperature instant #hours and tenths
-"IUX":"XHI" #Maximal humidity instant #hours and tenths
-"IUX":"NHI" #Minimal humidity instant #hours and tenths
-"IVX":"XWI" #Maximal wind instant #hours and tenths
-"IRRX":"XPII" #Maximal precipitation intensity instant #hours and tenths
-"RRX":"XPI" #Maximal precipitation intensity #millimeters
-"RG":"GR" #Global radiation #joules/cm2
-"RGC":"CGR" #Calculated global radiation #joules/cm2
-"PAR":"PAR" #Photosynthetic active radiation #joules/cm2
-"TX":"XT" #Maximal temperature #degree Celsius
-"S1X":"X1S" #Soil maximal teVX:VITESSE MAXIMALE DU VENT (METRES PAR SECONDE)
-mperature at -10cm #degree Celsius
-"TN":"NT" #Minimal temperature #degree Celsius
-"S1N":"N1S" #Soil minimal temperature at -10cm #degree Celsius
-"TM":"MT" #Mean temperature #degree Celsius
-"TMC":"CMT" #Calculated mean temperature #degree Celsius
-"S5M": #Mean soil temperature at -50cm #degree Celsius
-"TD":"DT" #Dew point temperature  #degree Celsius
-"U4":"H4" #period with  humidity <40% #hours and tenths
-"U8":"H8" #period with  humidity >80% #hours and tenths
-"U9":"H9" #period with  humidity >90% #hours and tenths
-"TVM":"MVP" #Mean vapor pressure #millibars
-"VET":"TEW" #total wind East direction # kilometers
-"VNT":"TNW" #total wind Nord direction # kilometers
-"VNET":"TNEW" #total wind nord-east direction # kilometers
-"VNWT":"TNWW" #total wind nord-West direction # kilometers
-"VWT":"TWW" #total wind West direction # kilometers
-"VST":"TSW" #total wind sud direction # kilometers
-"VSET":"TSEW" #total wind sud-east direction # kilometers
-"VSWT":"TSWW" #total wind sud-West direction # kilometers
-"VX":"SP":"" #Maximal wind speed #meters per second
-"V":"S" #Mean wind spead #meters per second
+AN
+	- YEAR
+MOIS
+	- MONTH
+JOUR
+	- DAY
+AMP
+	- RAN #Temperature range Range #degree Celsius
+GVX
+	- MWD #maximal wind direction #degree
+DH
+	- WD #Daily wetness duration # hours and tenths
+DI
+	- ID #Insolation duration #hours and tenths
+DIC
+	- CID # calculated insolation duration #hours and tenths
+BAC
+	- ET #evaporation tray  #millimeters
+EP
+	- PE #Piche evapotranspiration #millimeters
+ETP
+	- ETP # Measured evapotranspiration #millimeters
+ETPP
+	- PETP #Penman evapotranspiration #millimeters
+ETPPC
+	- CPETP #Corrected Piche evapotranspiration #millimeters
+FRAC
+	- FRAC #Insolation fraction  #percentage
+HOX
+	- XWH #maximal water height #millimeters
+HON
+	- NWH #minimal water height #millimeters
+HOM
+	- MWH #mean water height #millimeters
+RR
+	- PH #Precipitation height #millimeters
+UX
+	- XH #Maximal humidity #percentage
+UN
+	- NH #Minimal humidity #percentage
+UM
+	- MH #Mean humidity
+I1N
+	- I1N #Actinothermal index +10cm #degree Celsius
+I1X
+	- I1X #Actinothermal index +10cm (Maximum) #degree Celsius
+I5N
+	- I5N #Actinothermal index +50cm #degree Celsius
+I5X
+	- I5X #Actinothermal index +50cm (Maximum) #degree Celsius
+ITX
+	- XTI #Maximal temperature instant #hours and tenths
+ITN
+	- NTI #Minimal temperature instant #hours and tenths
+IUX
+	- XHI #Maximal humidity instant #hours and tenths
+IUX
+	- NHI #Minimal humidity instant #hours and tenths
+IVX
+	- XWI #Maximal wind instant #hours and tenths
+IRRX
+	- XPII #Maximal precipitation intensity instant #hours and tenths
+RRX
+	- XPI #Maximal precipitation intensity #millimeters
+RG
+	- GR #Global radiation #joules/cm2
+RGC
+	- CGR #Calculated global radiation #joules/cm2
+PAR
+	- PAR #Photosynthetic active radiation #joules/cm2
+TX
+	- XT #Maximal temperature #degree Celsius
+S1X
+	- X1S #Soil maximal teVX:VITESSE MAXIMALE DU VENT (METRES PAR SECONDE)
+#mperature at -10cm #degree Celsius
+TN
+	- NT #Minimal temperature #degree Celsius
+S1N
+	- N1S #Soil minimal temperature at -10cm #degree Celsius
+TM
+	- MT #Mean temperature #degree Celsius
+TMC
+	- CMT #Calculated mean temperature #degree Celsius
+S5M
+	-  #Mean soil temperature at -50cm #degree Celsius
+TD
+	- DT #Dew point temperature  #degree Celsius
+U4
+	- H4 #period with  humidity <40% #hours and tenths
+U8
+	- H8 #period with  humidity >80% #hours and tenths
+U9
+	- H9 #period with  humidity >90% #hours and tenths
+TVM
+	- MVP #Mean vapor pressure #millibars
+VET
+	- TEW #total wind East direction # kilometers
+VNT
+	- TNW #total wind Nord direction # kilometers
+VNET
+	- TNEW #total wind nord-east direction # kilometers
+VNWT
+	- TNWW #total wind nord-West direction # kilometers
+VWT
+	- TWW #total wind West direction # kilometers
+VST
+	- TSW #total wind sud direction # kilometers
+VSET
+	- TSEW #total wind sud-east direction # kilometers
+VSWT
+	- TSWW #total wind sud-West direction # kilometers
+VX
+	- SP
+	-  #Maximal wind speed #meters per second
+V
+	- S #Mean wind spead #meters per second
 
 ########################################
 #Field dans vineyard measurements
@@ -68,59 +128,85 @@ mperature at -10cm #degree Celsius
 #Harvest information 2016 
 #colomn header already in English
 #comment(last column) traduction
-Vendange égrappé
-Vendange égrappé et foulée
-Pulié foliaire
-Vendange égrappé+foulée extrative so2 8% à 3g/hl
-Vendange égrappé+Fouloir extraction
-Vendange égrappé+Foulage extractive
-Vendange égrappé+Foulée extractive Pellenc
-Vendange égrappé et fouloir extraction de pellenc
-Vendange égrappé foulage
-Thermovinification 70° pendant 20min
+# Vendange égrappé
+# Vendange égrappé et foulée
+# Pulié foliaire
+# Vendange égrappé+foulée extrative so2 8% à 3g/hl
+# Vendange égrappé+Fouloir extraction
+# Vendange égrappé+Foulage extractive
+# Vendange égrappé+Foulée extractive Pellenc
+# Vendange égrappé et fouloir extraction de pellenc
+# Vendange égrappé foulage
+# Thermovinification 70° pendant 20min
 
 #LinkBetween_PlotInformation_HarvestInformation
-"systeme_taille":"pruning_system"
-#"piquets":"stakes" #? tuile?
-"nb_souches":"nb_rootstock"
-"densite_plantation":"plantation-density"
+systeme_taille
+	- pruningSystem
+#piquets
+	- stakes #? tuile?
+nb_souches
+	- RootstockNumber
+densite_plantation
+	- plantationDensity
 #orientation
-"entre_rangs":"inter_rows""
-"entre_ceps":"inter-vinestock"
-"systeme_irrigation":"irrigation_system"
+entre_rangs
+	- inter_rows
+entre_ceps
+	- inter-vinestock
+systeme_irrigation
+	- irrigation_system
 date_install_si ?????
 #label
-"cepage":"vine_variety"
-"clone_cepage":"clone-"
-"portegreffe":"clone_rootstock"
-"clone_portegreffe":"rootstock"
-"surgreffage":"doublegrafting"
-"rang":"row"
-"position_rang":"row-position"
+cepage
+	- vineVariety
+clone_cepage
+	- vineVarietyClone
+portegreffe
+	- rootstockClone
+clone_portegreffe
+	- rootstock
+surgreffage
+	- doublegrafting
+rang
+	- row
+position_rang
+	- rowPosition
 #region
 #type_sol #not necessary in this example
 #surface2
-"profondeur_sol":"soil-depth"
-"cadastre":"land_register"
-"type_sol3":"soil_type"
+profondeur_sol
+	- soilDepth
+cadastre
+	- landRegister
+type_sol3
+	- soilType
 #nom #not necessary in this example
 #adresse #not necessary in this example
 #Commentaire #not necessary in this example
-"sous-parcelle-culturale""
+sous-parcelle-culturale
 espalier
 guyot
-"bois":"wood"
-"fer":"iron"
-"traitement":"treatment"
+bois
+	- wood
+fer
+	- iron
+traitement
+	- treatment
 
 #Fr
-"variable":"variable"
-"RendementAnnuel":"Annualyield"
-"AciditeTotale":"TotalAcidity"
+variable
+	- variable
+RendementAnnuel
+	- Annualyield
+AciditeTotale
+	- TotalAcidity
 #DegreBrix
-"Sucres":"sugars"
-"ProductionAnnuelle":"Annualproduction"
-"AlcoolProbable":"Probable_alcohol"
+Sucres
+	- sugars
+ProductionAnnuelle
+	- Annualproduction
+AlcoolProbable
+	- ProbableAlcohol
 #Irrigation
 #pH
 
