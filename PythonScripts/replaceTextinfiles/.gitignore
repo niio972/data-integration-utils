@@ -1,0 +1,4 @@
+# exclude everything
+transf/*
+output/*
+*.yml
