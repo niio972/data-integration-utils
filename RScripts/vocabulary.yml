@@ -127,16 +127,16 @@ S:
 #Harvest information 2016 
 #colomn header already in English
 #comment(last column) traduction
-Vendange égrappé
-Vendange égrappé et foulée
-Pulié foliaire
-Vendange égrappé+foulée extrative so2 8% à 3g/hl
-Vendange égrappé+Fouloir extraction
-Vendange égrappé+Foulage extractive
-Vendange égrappé+Foulée extractive Pellenc
-Vendange égrappé et fouloir extraction de pellenc
-Vendange égrappé foulage
-Thermovinification 70° pendant 20min
+#Vendange égrappé
+#Vendange égrappé et foulée
+#Pulié foliaire
+#Vendange égrappé+foulée extrative so2 8% à 3g/hl
+#Vendange égrappé+Fouloir extraction
+#Vendange égrappé+Foulage extractive
+#Vendange égrappé+Foulée extractive Pellenc
+#Vendange égrappé et fouloir extraction de pellenc
+#Vendange égrappé foulage
+#Thermovinification 70° pendant 20min
 
 #LinkBetween_PlotInformation_HarvestInformation
 pruning_system:
@@ -154,8 +154,8 @@ inter-vinestock:
  - entre_ceps
 irrigationSystem:
  - systeme_irrigation
-date_install_si: # ?????
-  -
+system-settingup-date: 
+  - date_install_si
 label:
   - label
 vineVariety:
@@ -173,23 +173,30 @@ row:
 rowPosition:
  - position_rang
 #region
-#type_sol #not necessary in this example
 #surface2
 soilDepth:
  - profondeur_sol
 landRegister:
  - cadastre
 soilType:
+ - type_sol
  - type_sol3
-#nom #not necessary in this example
-#adresse #not necessary in this example
-#Commentaire #not necessary in this example
-sous-parcelle-culturale:
-  -
+name:
+  - nom
+adress:
+  - adresse
+Comment: 
+  - Commentaire 
+  - commentaire
+  - commentaires
+subplot:
+  - sous-parcelle-culturale
+subexperimentalplot: 
+  - sous-parcelle-experimentale
 espalier:
-  -
+  -espalier
 guyot:
-  -
+  -guyot
 wood:
  - bois
 iron:
@@ -213,8 +220,61 @@ probableAlcohol:
  - AlcoolProbable
 #Irrigation
 #pH
+midFlowering:
+  - MiFloraison
+midSofteningRipening: 
+  - MiVeraisonRamollissement
+softeningVeraison: 
+- VeraisonRamollissement
+harvestDate:
+  - DateRecolte
+oneBerryWeight: 
+- Poids1Baie
+#VE_PotentielBaseMoyen ?
+berriesNumber: 
+- NbBaies
+berriesWeight: 
+- PoidsBaies
+object: 
+- objet
+value: 
+- valeur
+operator: 
+- operateur
+file: 
+- fichier
+method:
+- methode
+weighing: 
+- Pesee
+calculation: 
+- Calcul
+abacus: 
+- Abaque
+refractometry: 
+- Refractometrie
+pHMetry: 
+- pHmetrie
+Electrotitrimetrie
+counting: 
+- comptage
+pressureChamber: 
+- ChambreAPression
+electrotitrimetry: 
+- Electrotitrimetrie
+variablesGroup:
+- groupe_variables
+annualGrapeproduction: 
+- ProdRdtRaisinAnnuel
+maturity: 
+- Maturite
+#PotentielBaseMoy_VE?
+phenology: 
+- Phenologie
+hour: 
+- heure
 
+#SO4 = Sélection Oppenheim 4 
 
-
-
-#bien regarder s'il y a d'autres éléments de vocabulaire
+#Arnaud: pour le formalisme, je ne savais pas tjrs s'il fallait un tiret ou tout coller avec des majuscules - A vérifier (ex: inter-row)
+#deux mots n'ont pas été traduits car je ne connais pas 
