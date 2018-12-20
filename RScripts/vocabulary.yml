@@ -142,8 +142,8 @@ V
 #LinkBetween_PlotInformation_HarvestInformation
 systeme_taille
 	- pruningSystem
-#piquets
-	- stakes #? tuile?
+piquets
+	- stakes 
 nb_souches
 	- RootstockNumber
 densite_plantation
@@ -155,7 +155,8 @@ entre_ceps
 	- inter-vinestock
 systeme_irrigation
 	- irrigation_system
-date_install_si ?????
+date_install_si
+  -system-settingup-date #date of system set up 
 #label
 cepage
 	- vineVariety
@@ -172,7 +173,8 @@ rang
 position_rang
 	- rowPosition
 #region
-#type_sol #not necessary in this example
+type_sol 
+  -soil_type
 #surface2
 profondeur_sol
 	- soilDepth
@@ -180,10 +182,15 @@ cadastre
 	- landRegister
 type_sol3
 	- soilType
-#nom #not necessary in this example
-#adresse #not necessary in this example
-#Commentaire #not necessary in this example
+nom
+  - name
+adresse
+  - adress
+Commentaire
+  - Comment
 sous-parcelle-culturale
+  -subplot
+
 espalier
 guyot
 bois
@@ -204,13 +211,10 @@ AciditeTotale
 Sucres
 	- sugars
 ProductionAnnuelle
-	- Annualproduction
+	- AnnualProduction
 AlcoolProbable
 	- ProbableAlcohol
 #Irrigation
 #pH
 
 
-
-
-#bien regarder s'il y a d'autres éléments de vocabulaire
