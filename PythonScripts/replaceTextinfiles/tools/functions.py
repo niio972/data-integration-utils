@@ -51,10 +51,7 @@ def multipleReplace(line, vocabulary):
     with the associated value, return the changed text
     """
     for uniqTerm in vocabulary:
-        for termSearched in vocabulary[uniqTerm]:
-            if(termSearched != None):
-                data = re.sub("('',","", data)
-                line = line.replace(termSearched, uniqTerm)
+       data = re.sub("()","", data)
 
 
 def runReplacing(args):
