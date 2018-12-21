@@ -78,8 +78,7 @@ PAR:
 XT:
   - TX #Maximal temperature #degree Celsius
 X1S:
-  - S1X #Soil maximal teVX (VITESSE MAXIMALE DU VENT (METRES PAR SECONDE))
-#mperature at -10cm #degree Celsius
+  - S1X #Soil maximal temperature at -10cm #degree Celsius
 NT:
   - TN #Minimal temperature #degree Celsius
 N1S:
@@ -89,7 +88,7 @@ MT:
 CMT:
   - TMC #Calculated mean temperature #degree Celsius
 S5M:
-  -  #Mean soil temperature at -50cm #degree Celsius
+  - MS5  #Mean soil temperature at -50cm #degree Celsius
 DT:
   - TD #Dew point temperature  #degree Celsius
 H4:
@@ -147,9 +146,10 @@ RootstockNumber:
   - nb_souches
 plantationDensity:
   - densite_plantation
-#orientation
 rowSpacing:
   - entre_rangs
+  - entre_rows
+
 VineSpacing:
   - entre_ceps
 irrigationSystem:
@@ -168,6 +168,13 @@ rootstock:
   - clone_portegreffe
 doubleGrafting:
   - surgreffage
+rowsNumber:
+  - nb_rangs
+  - nb_rows
+minimalSize:
+  - taille_minimale
+cropManagement:
+  - mode_conduite
 row:
   - rang
 rowPosition:
@@ -189,8 +196,10 @@ Comment:
   - Commentaire 
   - commentaire
   - commentaires
-subplot:
+culturalSubplot:
   - sous-parcelle-culturale
+subplot:
+  - sous-parcelle
 experimentalSubplot: 
   - sous-parcelle-experimentale
 espalier:
@@ -203,7 +212,10 @@ iron:
   - fer
 treatment:
   - traitement
-
+startDate:
+  - date_debut
+startEnd:
+  - date_fin
 #Fr
 variable:
   - variable
@@ -270,8 +282,9 @@ phenology:
   - Phenologie
 hour: 
   - heure
+  mode_conduite
 
 #VE_PotentielBaseMoyen ?
 #PotentielBaseMoy_VE?
-#SO4 = Sélection Oppenheim 4 
+ 
  
