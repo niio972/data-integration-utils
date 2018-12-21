@@ -282,7 +282,6 @@ phenology:
   - Phenologie
 hour: 
   - heure
-  mode_conduite
 
 #VE_PotentielBaseMoyen ?
 #PotentielBaseMoy_VE?
