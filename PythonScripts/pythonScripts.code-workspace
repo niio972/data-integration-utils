@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "replaceTextinfiles"
+		},
+		{
+			"path": "/home/charlero/PROJETS/BigDataGrappes/Git/data-integration-utils/RScripts"
 		}
 	],
 	"settings": {

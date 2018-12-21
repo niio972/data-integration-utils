@@ -194,9 +194,9 @@ subplot:
 experimentalSubplot: 
   - sous-parcelle-experimentale
 espalier:
-  -espalier
+  - espalier
 guyot:
-  -guyot
+  - guyot
 wood:
   - bois
 iron:
@@ -274,6 +274,4 @@ hour:
 #VE_PotentielBaseMoyen ?
 #PotentielBaseMoy_VE?
 #SO4 = Sélection Oppenheim 4 
-
-#Arnaud: pour le formalisme, je ne savais pas tjrs s'il fallait un tiret ou tout coller avec des majuscules  - A vérifier (ex: inter-row)
-#deux mots n'ont pas été traduits car je ne connais pas 
+ 
