@@ -44,20 +44,26 @@ def isValidFile(filePath):
     else:
         return False
 
+def createPatternFromWordList(wordsList):
+    pattern = r"\b(" + r"(?!(_|-))|".join(wordsList)+ r"(?!(_|-)))\b"
+    return pattern
 
 def multipleReplace(data, vocabulary):
     """
     take a text and replace words that match the key in a dictionary
     with the associated value, return the changed text
     """
+    # data = data.replace("_","").replace("-","")
     try:
-         for uniqTerm in vocabulary:
-            data = re.sub("(" + "|".join(vocabulary[uniqTerm]) + ")", uniqTerm, data)
-    except TypeError as identifier:
-        logger.err(uniqTerm)
+        for uniqTerm in vocabulary:
+            pattern = createPatternFromWordList(vocabulary[uniqTerm])
+            pattern = re.compile(pattern)
+            data = pattern.sub(uniqTerm, data)
+    except TypeError as err:
+        logger.err(err)
         sys.exit()
-   
     return data
+
 
 def runReplacing(args):
     inputDirectoryPath = args.i
@@ -76,7 +82,7 @@ def runReplacing(args):
             os.makedirs(outputDirectoryPath, exist_ok=True)
             ValidOutputDirectory = True
             logger.info("Directory created successfully :" +
-                            outputDirectoryPath)
+                        outputDirectoryPath)
         except OSError as exc:  # Guard against race condition
             logger.err(outputDirectoryPath + " is not a valid directory")
 
@@ -90,17 +96,15 @@ def runReplacing(args):
     AbsOutputDirectoryPath = os.path.abspath(outputDirectoryPath)
     filenameList = os.listdir(os.path.abspath(AbsInputDirectoryPath))
     vocabulary = loadVocabularyFile(vocabularyPath)
-    
 
     for filename in filenameList:
         if not filename.startswith('.'):
+            logger.info("Replace terms in file "  + filename)
             inputFilename = os.path.join(AbsInputDirectoryPath, filename)
             outputFile = os.path.join(AbsOutputDirectoryPath, filename)
-            fileIn = open(inputFilename, 'r')
-            data = fileIn.read()
-            fileIn.close()
-            dataMod = multipleReplace(data,vocabulary)
-            fileOut = open(outputFile, 'w')
-            fileOut.write(dataMod)
-            fileOut.close()
-        
+            with open(inputFilename,"r",encoding="utf8") as fileIn, open(outputFile,"w",encoding="utf8") as fileOut:
+                data = fileIn.read()
+                dataOut = multipleReplace(data, vocabulary)
+                fileOut.write(dataOut)
+       
+    logger.info("Replacements done")
