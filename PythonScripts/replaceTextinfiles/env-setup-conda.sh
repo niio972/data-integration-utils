@@ -17,5 +17,6 @@ conda install --name ${nameEnv} pip
 source activate ${nameEnv}
 pip install --upgrade pip
 pip install pyyaml
+pip install pylint
 
 echo "Use env name activate: ${nameEnv}"

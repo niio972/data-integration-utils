@@ -1,18 +1,20 @@
-# Install Replace Files
+# Install Replace Text in Files
 
 ## Install from Git
-git clone https://github.com/niio972/data-integration-utils.git
+Clone the directory :
+
+```git clone https://github.com/niio972/data-integration-utils.git```
+
 Go to the directory:
- - ```{path}/data-integration-utils/PythonScripts/replaceTextinfiles```
- - 
+ - ```{path}/data-integration-utils/PythonScripts/replaceTextinfiles```C
 
 ## Install conda
 Get the latest version of miniconda at [miniconda](https://www.anaconda.com/download/#linux)
-```bash Miniconda3-latest-Linux-x86_64.sh```
+```bash Miniconda*-Linux-x86_64.sh```
 
 ### Set environment
 
-```env-setup-conda```
+```. env-setup-conda```
 
 ### Command to activate environment
 ```source activate replacetext```
@@ -31,6 +33,26 @@ Get the latest version of miniconda at [miniconda](https://www.anaconda.com/down
   -v, --verbose  increase output verbosity
   ```
 
-**Example** : 
+### Example :
+**Exemple of text file :**
+```
+object, type, type_sol
+plantOne, plant, clay
+```
+**Exemple of vocabulary file** :
+
+Transform **type_sol** and  **type_sol3** in __**SoilType**__.
+
+```yaml
+soilType:
+  - type_sol # soil type of plant
+  #- type_sol3
+```
+**Exemple of result :**
+```
+object, type, soilType
+plantOne, plant, clay
+```
+**Example run** : 
 
 ```python replaceStrings.py -i ./transf -o ./output -c ./vocabulary.yml```
