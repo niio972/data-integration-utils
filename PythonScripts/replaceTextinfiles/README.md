@@ -4,13 +4,18 @@
 git clone https://github.com/niio972/data-integration-utils.git
 Go to the directory:
  - ```{path}/data-integration-utils/PythonScripts/replaceTextinfiles```
-## Install dependencies
+ - 
 
-### Install pipenv if not
-```pip install --user pipenv```
+## Install conda
+Get the latest version of miniconda at [miniconda](https://www.anaconda.com/download/#linux)
+```bash Miniconda3-latest-Linux-x86_64.sh```
 
-### Install python package
-```pipenv sync```
+### Set environment
+
+```env-setup-conda```
+
+### Command to activate environment
+```source activate replacetext```
 
 ## Run script
 
@@ -28,4 +33,4 @@ Go to the directory:
 
 **Example** : 
 
-```pipenv run python replaceStrings.py -i ./transf -o ./output -c ./vocabulary.yml```
+```python replaceStrings.py -i ./transf -o ./output -c ./vocabulary.yml```
