@@ -45,7 +45,7 @@ def isValidFile(filePath):
         return False
 
 def createPatternFromWordList(wordsList):
-    pattern = r"\b(" + r"(?!(_|-))|".join(wordsList)+ r"(?!(_|-)))\b"
+    pattern = r"(" + r"(?!(_|-))|".join(wordsList)+ r"(?!(_|-)))\b"
     return pattern
 
 def multipleReplace(data, vocabulary):
