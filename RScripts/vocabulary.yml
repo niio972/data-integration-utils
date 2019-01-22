@@ -285,5 +285,202 @@ hour:
 
 #VE_PotentielBaseMoyen ?
 #PotentielBaseMoy_VE?
- 
- 
+
+####################
+#PILOTYPE
+####################
+#variable #unité (#précision)  #description
+
+
+-r_PDMS #µg eq DMS/kg # Potentiel en DiMethylsulfure - r pour raisin
+-r_HA_GRP #mg/kg # Grape Reaction Product
+-r_HA_AFERT #mg/kg #Acide trans-fertarique
+-r_HA_ACOU #mg/kg #acide trans-coutarique
+-r_HA_ACAF #mg/kg #acide trans-caftarique - r pour raisin
+-r_GSH #mg/kg (#2) #Glutathion - r pour raisin
+-pH 
+-Veraison #% 
+-Vent_j #km/h # Vitesse moyenne du vent journalière
+-Vent_h #km/h # Vitesse du vent moyenne horaire
+-VentMax_j #km/h # Vitesse du vent maximale journalière
+-VPD_h #kPa #Déficit en vapeur d'eau horaire
+-VPDMax_j #kPa #Déficit de vapeur d'eau maximal journalier
+-Trans_j_PourFiable #% #Pourcentage de données fiables de transpiration sur la période d'intégration
+-Trans_j_IndConf #n/a #indice de confiance sur la transpiration journalière 2: fiable 1: incertaine 0: à exclure l'indice est défini sur la plage [5-20h] (UTC). les flux forcés à 0 sont recherchés entre [8-18h] (UTC) nbInd_h_1+nbInd_h_2+nbDonneesManquantes+nbInd_h_-1 - < 5% -> 2 (fiable) - >= 5% & < 33% -> 1 (incertain) - >= %33 -> 0 (à exclure)
+-Trans_j #mm #Transpiration moyenne journalière. Intégration par trapèze sur la plage [5-20h] UTC.
+-Trans_h_IndConf #n/a #Revoir description Indice de confiance à accorder dans la donnée. 0 = bonne 1 = douteuse car valeur transpiration>0.5 2 = douteuse car dt<0.5
+-Trans_h #mm/h #Transpiration moyenne horaire
+-Thiol_A3MH #ng/l #acétate de 3-mercaptohexyle
+-Thiol_3MH #ng/l #3-mercaptohexan-1-ol
+-Terpenol_ROOX #µg/l #Rose Oxyde
+-Terpenol_NER #µg/l #Nérol
+-Terpenol_Linalol #µg/l #Linalol
+-Terpenol_GER #µg/l #Géraniol
+-Terpenol_CIT #µg/l #Citronellol
+-Terpenol_ATER #µg/l #alpha terpineol
+-Temperature_j #degre Celcius #Température moyenne journalière
+-Temperature_h #degre Celcius #Température moyenne horaire
+-TemperatureMin_j #degre Celsius #Température minimale journalière
+-TemperatureMax_j #degre Celcius #Température maximale journalière
+-Tan_tanins #mg/l #Concentration tanins
+-Tan_gal #pourcentage #Unité galloylé
+-Tan_egc #pourcentage #Unité épigallocathéchine
+-Tan_dpm #n/a #Degré moyen de polymérisation
+-TAV #pourcentage volume #titre alcoométrique volumique
+-Sucres #g/l #n/a
+-SO2Total #mg/l #n/a
+-SO2Libre #mg/l #n/a
+-SFE #m2 # Surface Foliaire exposee SFE= (2*Hauteur+Largeur)*(1-Porosite/100)/100
+-RayonnementGlobal_j #W/m2 #Rayonnement global journalier (cumul sur la journée)
+-RayonnementGlobal_h #W/m2 #Rayonnement global horaire
+-Precipitation_j #mm #Précipitations cumulées journalières
+-Precipitation_h #mm #Précipitations horaires
+-PotentielBase #MPa (#2) #Potentiel hydrique de base
+-PorositeFeuillage #% 
+-PoidsVendanges #kg 
+-PoidsTailleAvantCapteur #g 
+-PoidsTailleApresCapteur #g 
+-PoidsTaille #g 
+-PoidsGrappeAvantCapteur #Kg 
+-PoidsGrappeApresCapteur #Kg 
+-PoidsBaies #g 
+-Poids1Sarment #g 
+-Poids1Grappe #g 
+-Poids1Baie #g 
+-PTr_cys4MMP #µg/kg (#2) #Précurseur cysteinyle de la 4-methyl-4-mercaptopentan-2-one - PTr : precurseurs de thiols sur le raisin
+-PTr_cys3MH #ug/kg (#2) #Précurseur cysteinyle du 3-mercaptohexan-1-ol - PTr : precurseurs de thiols sur le raisin
+-PTr_G4MMP #µg/kg (#2) #S-(4-methylpentan-2-one)-glutathione - PTr : precurseurs de thiols sur le raisin
+-PTr_G3MH #µg/kg (#2) #S-(hexan-1-ol)-glutathione - PTr : precurseurs de thiols sur le raisin
+-PT_cys3MH #µg/l #cystéine-3MH
+-PT_G3MH #µg/l #gluthation-3MH
+-PDMS #µg eq DMS/l #potentiel en diméthylsulfure
+-NbSarments #n/a
+-NbSarmentAvantCapteur #n/a
+-NbSarmentApresCapteur #n/a
+-NbGrappes #n/a
+-NbGrappeAvantCapteur #n/a
+-NbGrappeApresCapteur #n/a
+-NbBaies #n/a
+-MiVeraison #n/a
+-MiFloraison #n/a
+-MiDebourrement #n/a
+-LargeurVegetation #cm 
+-Irrigation #mm (#1)
+-IPT #n/a #DO280
+-IC_PT #n/a #Indice couleur Pigments totaux
+-IC_PND #n/a #Indice couleur Pigments non décolorables
+-IC_IPT #n/a 
+-IC_IC_Cor #n/a #corrigé de l'effet SO2
+-IC_IC #n/a #IndiceCouleur_IntensiteColorante
+
+
+
+-IC_DO620_Cor #n/a #corrigé de l'effet SO2
+-IC_DO620  #n/a
+-IC_DO520_Cor #n/a #corrigé de l'effet SO2
+-IC_DO520 #n/a
+-IC_DO420_Cor #n/a #corrigé de l'effet SO2
+-IC_DO420 #n/a 
+-IC_DO320 #n/a
+-IBMP #ng/l #2-isobutyl-3-méthoxypyrazine
+-HumiditeRelative_j #% #Humidité relative moyenne journalière
+-HumiditeRelative_h #% #Humidité relative horaire
+-HumiditeRelativeMin_j #% #Humidité Relative minimale journalière
+-HumiditeRelativeMax_j #% #Humidité relative maximale journalière
+-HauteurVegetation #cm 
+-HA_GRP #mg/l #Acides hydroxycinnamiques Grape Reaction Product
+-HA_AFERT #mg/l #Acides hydroxycinnamiques Acide trans-fertarique
+-HA_ACOU #mg/l #Acides hydroxycinnamiques Acide trans-coutarique
+-HA_ACAF #mg/l #Acides hydroxycinnamiques Acide trans-caftarique
+-GlucoseFructose #g/l 
+-GSH_mol #umol/l (#2) #Glutathion
+-GSH #mg/l #Gluthation
+-GEr_Terpenes #µg eq 4-nonanol/kg #GEr pour glycosides enzymatiques sur le raisin
+-GEr_Phenols #µg eq 4-nonanol/kg 2 #GEr pour glycosides enzymatiques sur le raisin
+-GEr_GlyEnzTot #µg eq 4-nonanol/kg #somme des Gly_enz - GEr pour glycosides enzymatiques sur le raisin
+-GEr_C13 #µg eq 4-nonanol/kg #GEr pour glycosides enzymatiques sur le raisin
+-GEr_Alcools #µg eq 4-nonanol/kg #GEr pour glycosides enzymatiques sur le raisin
+-GDD_ins #Degré Celsius #Growing Degree Days; Temps thermique journalier instantané; GDD=Tmoy-Tbase; TBase=10°C;
+-GDD_cum #Degré Celsius #accumulation des degrés jours sur une base 10 à partir du 01/04.
+-FruitionNbSarmentTotal #n/a #Nombre total de sarments estimé à la pose du capteur
+-FruitionNbSarmentApresCapteur #n/a #Nombre de sarment après capteur estimé à la pose du capteur
+flowering: 
+-Floraison #% 
+ethylOctanoate: 
+-Ester_OE #mg/l #octanoate d'éthyle
+ethylHexanoate: 
+-Ester_HE #mg/l #hexanoate déthyle
+ethylDecanoate: 
+-Ester_DE #mg/l #décanoate déthyle
+ethylButanoate: 
+-Ester_BE #mg/l #butanoate d'éthyle
+isoamylAcetate: 
+-Ester_AI #mg/l #acétate d'isoamyle
+hexylAcetate:
+-Ester_AH #mg/l #acétate d'hexyle
+phenylethylAcetate: 
+-Ester_ABPE #mg/l #acétate de 2-phényléthyl
+ethylHydroxybutanoate:
+-Ester_3HBE #mg/l #3-hydroxybutanoate d'éthyl
+phenylethanol: 
+-Ester_2PHEN #mg/l #2-phényléthanol
+ethylMethylbutanate: 
+-Ester_2MPE #mg/l #2-méthylpropanoate d'éthyle
+ethylMethylbutanoate: 
+-Ester_2MBE #mg/l #2-méthylbutanoate d'éthyle
+ethylHydroxypropanoate: 
+-Ester_2HPE #mg/l #2-hydroxypropanoate d'éthyl
+ethylHydroxyisocaproate: 
+-Ester_2HICE #mg/l #2-hydroxyisocaproate d'éthyl
+ETP: 
+-ETP_j #mm #Evapotranspiration cumul journalier (Penman-Monteith, FAO56)
+hourlyETP:
+-ETP_h #mm/h #Evapotranspiration horaire (Penman-Monteith, FAO56)
+deltaC13: 
+-DeltaC13 #n/a 
+degreeBrix: 
+-DegreBrix #n/a 
+budding: 
+-Debourrement #% 
+harvestDate: 
+-DateRecolte #n/a 
+dimethylsulfur: 
+-DMS #µg/l #diméthylsulfure
+
+-Coord_b_Cor #n/a #Corrigé de l'effet SO2
+-Coord_b #n/a 
+-Coord_a_Cor #n/a #Corrigé de l'effet SO2
+-Coord_a #n/a 
+-Coord_L_Cor #n/a #Corrigé de l'effet SO2
+-Coord_L #n/a 
+
+glucosidAnthocyanin: 
+-Cantho_glc #mg/l #Anthocyanes glucoside
+trimthyldihydronaphtalene: 
+-C13_TDN #µg/l #1,1,6-triméthyl-1,2-dihydronaphtalène
+betaIonone: 
+-C13_BION #µg/l # b-ionone
+betaDamascenone: 
+-C13_BDAM #µg/l # b-damascénone
+alphaIonone:
+-C13_AION #µg/l # a-ionone
+assimilableNitrogen:
+-AzoteAssimilable #mg/l #Calcul = AzoteAmnine + AzoteAmmoniacal
+ammoniacalNitrogen: 
+-AzoteAmmoniacal  #mg/l #n/a
+amineNitrogen: 
+-AzoteAmine #mg/l #n/a
+apex: 
+-Apex #n/a (#2) #Apex = (nb2*2+nb1)/(nb2+nb1+nb0)
+anthocyanin: 
+-Anthocyanes #mg/l 
+probableAlcohol: 
+-AlcoolProbable #pourcentage volume 
+volatileAcidity: 
+-AciditeVolatique #gH2SO4 
+totalAcidity: 
+-AciditeTotale #gH2SO4/l 
+malicAcid: 
+-AcideMalique #g/l 
+lacticAcid: 
+-AcideLactique #g/l 
