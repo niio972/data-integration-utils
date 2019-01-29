@@ -290,91 +290,164 @@ hour:
 #PILOTYPE
 ####################
 #variable #unité (#précision)  #description
-
-
+#remarque: enlever les données suivi de sève mais quelles sont elles 
+dimethylsulfurGrapePotential: 
 -r_PDMS #µg eq DMS/kg # Potentiel en DiMethylsulfure - r pour raisin
+grapeReactionProduct: 
 -r_HA_GRP #mg/kg # Grape Reaction Product
+grapeTransFertaricAcid: 
 -r_HA_AFERT #mg/kg #Acide trans-fertarique
+grapeTranscourtaricAcid: 
 -r_HA_ACOU #mg/kg #acide trans-coutarique
+grapetranscaftaricAcid: 
 -r_HA_ACAF #mg/kg #acide trans-caftarique - r pour raisin
+grapeGlutathione: 
 -r_GSH #mg/kg (#2) #Glutathion - r pour raisin
+pH: 
 -pH 
+veraison:
 -Veraison #% 
+dailyWind:
 -Vent_j #km/h # Vitesse moyenne du vent journalière
+hourlyWind: 
 -Vent_h #km/h # Vitesse du vent moyenne horaire
+maximumHourlyWind: 
 -VentMax_j #km/h # Vitesse du vent maximale journalière
+hourlyWaterVaporDeficit: 
 -VPD_h #kPa #Déficit en vapeur d'eau horaire
+maximumHourlyWaterVaporDeficit: 
 -VPDMax_j #kPa #Déficit de vapeur d'eau maximal journalier
+reliableTranspirationDataPercentage: 
 -Trans_j_PourFiable #% #Pourcentage de données fiables de transpiration sur la période d'intégration
+DailyTranspirationConfidenceIndex: 
 -Trans_j_IndConf #n/a #indice de confiance sur la transpiration journalière 2: fiable 1: incertaine 0: à exclure l'indice est défini sur la plage [5-20h] (UTC). les flux forcés à 0 sont recherchés entre [8-18h] (UTC) nbInd_h_1+nbInd_h_2+nbDonneesManquantes+nbInd_h_-1 - < 5% -> 2 (fiable) - >= 5% & < 33% -> 1 (incertain) - >= %33 -> 0 (à exclure)
--Trans_j #mm #Transpiration moyenne journalière. Intégration par trapèze sur la plage [5-20h] UTC.
--Trans_h_IndConf #n/a #Revoir description Indice de confiance à accorder dans la donnée. 0 = bonne 1 = douteuse car valeur transpiration>0.5 2 = douteuse car dt<0.5
--Trans_h #mm/h #Transpiration moyenne horaire
+meanDailyTranspiration: 
+# à supprimer, flux de sève  #-Trans_j #mm #Transpiration moyenne journalière. Intégration par trapèze sur la plage [5-20h] UTC.
+# à supprimer, flux de sève  #-Trans_h_IndConf #n/a #Revoir description Indice de confiance à accorder dans la donnée. 0 = bonne 1 = douteuse car valeur transpiration>0.5 2 = douteuse car dt<0.5
+# à supprimer, flux de sève  #-Trans_h #mm/h #Transpiration moyenne horaire
+3mercaptohexyleAcetate: 
 -Thiol_A3MH #ng/l #acétate de 3-mercaptohexyle
+3mercaptohexan1ol: 
 -Thiol_3MH #ng/l #3-mercaptohexan-1-ol
+terpenol_roseoxide: 
 -Terpenol_ROOX #µg/l #Rose Oxyde
+terpenol_nerol: 
 -Terpenol_NER #µg/l #Nérol
+terpenol_linalol: 
 -Terpenol_Linalol #µg/l #Linalol
+terpenol_geraniol: 
 -Terpenol_GER #µg/l #Géraniol
+terpenolcitronellol: 
 -Terpenol_CIT #µg/l #Citronellol
+terpenol_alphaterpineol: 
 -Terpenol_ATER #µg/l #alpha terpineol
+meanDailyTemperature: 
 -Temperature_j #degre Celcius #Température moyenne journalière
+meanHourlyTemperature: 
 -Temperature_h #degre Celcius #Température moyenne horaire
+dailyMinimumTemperature: 
 -TemperatureMin_j #degre Celsius #Température minimale journalière
+dailyMaximumTemperature: 
 -TemperatureMax_j #degre Celcius #Température maximale journalière
+tanninsConcentration: 
 -Tan_tanins #mg/l #Concentration tanins
+tanins_galloylUnit: 
 -Tan_gal #pourcentage #Unité galloylé
+tanins_epigallocathechinUnit: 
 -Tan_egc #pourcentage #Unité épigallocathéchine
+tannins_ polymerisationMeanDegree: 
 -Tan_dpm #n/a #Degré moyen de polymérisation
+tannins_alcoholicStrenghtbyVolume:
 -TAV #pourcentage volume #titre alcoométrique volumique
+sugars: 
 -Sucres #g/l #n/a
+totalSO2: 
 -SO2Total #mg/l #n/a
+freeSO2:
 -SO2Libre #mg/l #n/a
+exposedLeafArea: 
 -SFE #m2 # Surface Foliaire exposee SFE= (2*Hauteur+Largeur)*(1-Porosite/100)/100
+dailyGlobalRadiation: 
 -RayonnementGlobal_j #W/m2 #Rayonnement global journalier (cumul sur la journée)
+hourlyGlobalRadiation: 
 -RayonnementGlobal_h #W/m2 #Rayonnement global horaire
+dailyPrecipitation: 
 -Precipitation_j #mm #Précipitations cumulées journalières
+hourlyPrecipitation: 
 -Precipitation_h #mm #Précipitations horaires
+baseWaterPotential: 
 -PotentielBase #MPa (#2) #Potentiel hydrique de base
+foliagePorosity: 
 -PorositeFeuillage #% 
+harvestWeight: 
 -PoidsVendanges #kg 
+cuttingWeightBeforeSensors: 
 -PoidsTailleAvantCapteur #g 
+cuttingWeightAfterSensors: 
 -PoidsTailleApresCapteur #g 
+cuttingWeight:
 -PoidsTaille #g 
+bunchWeightBeforeSensors: 
 -PoidsGrappeAvantCapteur #Kg 
+bunchWeightAfterSensors: 
 -PoidsGrappeApresCapteur #Kg 
+berriesWeight: 
 -PoidsBaies #g 
+oneVineShootWeight: 
 -Poids1Sarment #g 
+oneBunchWeight: 
 -Poids1Grappe #g 
+oneBerryWeight:
 -Poids1Baie #g 
+thiolPrecursors_4methyl4mercaptopentan2one: 
 -PTr_cys4MMP #µg/kg (#2) #Précurseur cysteinyle de la 4-methyl-4-mercaptopentan-2-one - PTr : precurseurs de thiols sur le raisin
+thiolPrecursors_3-mercaptohexan1ol: 
 -PTr_cys3MH #ug/kg (#2) #Précurseur cysteinyle du 3-mercaptohexan-1-ol - PTr : precurseurs de thiols sur le raisin
+thiolPrecursors_4methylpentan2one: 
 -PTr_G4MMP #µg/kg (#2) #S-(4-methylpentan-2-one)-glutathione - PTr : precurseurs de thiols sur le raisin
+thiolPrecursors_hexan1ol: 
 -PTr_G3MH #µg/kg (#2) #S-(hexan-1-ol)-glutathione - PTr : precurseurs de thiols sur le raisin
+3MHcystein: 
 -PT_cys3MH #µg/l #cystéine-3MH
+3MHglutathione: 
 -PT_G3MH #µg/l #gluthation-3MH
+dimethylsulfurPotential: 
 -PDMS #µg eq DMS/l #potentiel en diméthylsulfure
+VineShootsNumber: 
 -NbSarments #n/a
+VineShootsNumberBeforeSensor:
 -NbSarmentAvantCapteur #n/a
+VineShootsNumberAfterSensor:
 -NbSarmentApresCapteur #n/a
+bunchesNumber: 
 -NbGrappes #n/a
+bunchesNumberBeforeSensors: 
 -NbGrappeAvantCapteur #n/a
+bunchesNumberAfterSensors: 
 -NbGrappeApresCapteur #n/a
+berryNumber: 
 -NbBaies #n/a
+midVeraison: 
 -MiVeraison #n/a
+midFlowering: 
 -MiFloraison #n/a
+midBudding: 
 -MiDebourrement #n/a
+widthVegetation: 
 -LargeurVegetation #cm 
+irrigation: 
 -Irrigation #mm (#1)
+
 -IPT #n/a #DO280
+
+totalPigmentsColorIndex: 
 -IC_PT #n/a #Indice couleur Pigments totaux
+colorIndex_ notdecolorisablePigments:
 -IC_PND #n/a #Indice couleur Pigments non décolorables
 -IC_IPT #n/a 
 -IC_IC_Cor #n/a #corrigé de l'effet SO2
+colorIndex_ colouringIntensity: 
 -IC_IC #n/a #IndiceCouleur_IntensiteColorante
-
-
-
 -IC_DO620_Cor #n/a #corrigé de l'effet SO2
 -IC_DO620  #n/a
 -IC_DO520_Cor #n/a #corrigé de l'effet SO2
@@ -382,27 +455,50 @@ hour:
 -IC_DO420_Cor #n/a #corrigé de l'effet SO2
 -IC_DO420 #n/a 
 -IC_DO320 #n/a
+
+2isobutyl3methoxypyrazine: 
 -IBMP #ng/l #2-isobutyl-3-méthoxypyrazine
+dailyMeanRelativeHumidity: 
 -HumiditeRelative_j #% #Humidité relative moyenne journalière
+hourlyRelativeHumidity:
 -HumiditeRelative_h #% #Humidité relative horaire
+dailyMinimumRelativeHumidity: 
 -HumiditeRelativeMin_j #% #Humidité Relative minimale journalière
+dailyMaximimRelativeHumidity: 
 -HumiditeRelativeMax_j #% #Humidité relative maximale journalière
+vegetationHigh: 
 -HauteurVegetation #cm 
+hydroxycinnamicAcids_grapeReactionProduct:
 -HA_GRP #mg/l #Acides hydroxycinnamiques Grape Reaction Product
+hydroxycinnamicAcids_transFertaricAcid: 
 -HA_AFERT #mg/l #Acides hydroxycinnamiques Acide trans-fertarique
+hydroxycinnamicAcids_transCoutaricAcid: 
 -HA_ACOU #mg/l #Acides hydroxycinnamiques Acide trans-coutarique
+hydroxycinnamicAcids_transCaftaricAcid: 
 -HA_ACAF #mg/l #Acides hydroxycinnamiques Acide trans-caftarique
+GlucoseFructose: 
 -GlucoseFructose #g/l 
+glutathioneGSH_mol: 
 -GSH_mol #umol/l (#2) #Glutathion
+glutathioneGSH: 
 -GSH #mg/l #Gluthation
+terpenesEnzymaticGlucosidGrape:
 -GEr_Terpenes #µg eq 4-nonanol/kg #GEr pour glycosides enzymatiques sur le raisin
+phenolsEnzymaticGlucosidGrape: 
 -GEr_Phenols #µg eq 4-nonanol/kg 2 #GEr pour glycosides enzymatiques sur le raisin
+totalEnzymaticGlucosidGrape: 
 -GEr_GlyEnzTot #µg eq 4-nonanol/kg #somme des Gly_enz - GEr pour glycosides enzymatiques sur le raisin
+enzymaticGlucosidGrape_C13: 
 -GEr_C13 #µg eq 4-nonanol/kg #GEr pour glycosides enzymatiques sur le raisin
+enzymaticGlucosidGrape: 
 -GEr_Alcools #µg eq 4-nonanol/kg #GEr pour glycosides enzymatiques sur le raisin
+growingDegreeDays: 
 -GDD_ins #Degré Celsius #Growing Degree Days; Temps thermique journalier instantané; GDD=Tmoy-Tbase; TBase=10°C;
+degreeDaysAccumulation: 
 -GDD_cum #Degré Celsius #accumulation des degrés jours sur une base 10 à partir du 01/04.
+totalVineShootsNumber:
 -FruitionNbSarmentTotal #n/a #Nombre total de sarments estimé à la pose du capteur
+fruitionTotalVineShootsNumberAfterSensor:
 -FruitionNbSarmentApresCapteur #n/a #Nombre de sarment après capteur estimé à la pose du capteur
 flowering: 
 -Floraison #% 
