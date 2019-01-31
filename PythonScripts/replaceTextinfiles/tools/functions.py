@@ -44,11 +44,14 @@ def isValidFile(filePath):
     else:
         return False
 
-def createPatternFromWordList(wordsList):
-    pattern = r"\b(?!(_|-))(" + r"|".join(wordsList)+ r")(?!(_|-))\b"
+def createPatternFromWordList(wordsList,strictPattern):
+    if(strictPattern != True):
+        pattern = r"\b(?!(_|-))(" + r"|".join(wordsList)+ r")(?!(_|-))\b"
+    else :
+        pattern = r"\b(" + r"|".join(wordsList)+ r")\b"
     return pattern
 
-def multipleReplace(data, vocabulary):
+def multipleReplace(data, vocabulary, strictPattern):
     """
     take a text and replace words that match the key in a dictionary
     with the associated value, return the changed text
@@ -56,7 +59,7 @@ def multipleReplace(data, vocabulary):
     # data = data.replace("_","").replace("-","")
     try:
         for uniqTerm in vocabulary:
-            pattern = createPatternFromWordList(vocabulary[uniqTerm])
+            pattern = createPatternFromWordList(vocabulary[uniqTerm],strictPattern)
             pattern = re.compile(pattern)
             data = pattern.sub(uniqTerm, data)
     except TypeError as err:
@@ -68,7 +71,13 @@ def multipleReplace(data, vocabulary):
 def runReplacing(args):
     inputDirectoryPath = args.i
     outputDirectoryPath = args.o
+
+    inputFilePath = args.f
+    outputFilePath = args.fo
+
     vocabularyPath = args.c
+
+    strictPattern = args.p
     # valid directory
     ValidInputDirectory = isValidDir(inputDirectoryPath)
     ValidOutputDirectory = isValidDir(outputDirectoryPath)
@@ -94,8 +103,10 @@ def runReplacing(args):
 
     AbsInputDirectoryPath = os.path.abspath(inputDirectoryPath)
     AbsOutputDirectoryPath = os.path.abspath(outputDirectoryPath)
-    filenameList = os.listdir(os.path.abspath(AbsInputDirectoryPath))
     vocabulary = loadVocabularyFile(vocabularyPath)
+
+    # if it is a directory 
+    filenameList = os.listdir(os.path.abspath(AbsInputDirectoryPath))
 
     for filename in filenameList:
         if not filename.startswith('.'):
@@ -104,7 +115,8 @@ def runReplacing(args):
             outputFile = os.path.join(AbsOutputDirectoryPath, filename)
             with open(inputFilename,"r",encoding="utf8") as fileIn, open(outputFile,"w",encoding="utf8") as fileOut:
                 data = fileIn.read()
-                dataOut = multipleReplace(data, vocabulary)
+                dataOut = multipleReplace(data, vocabulary,strictPattern)
                 fileOut.write(dataOut)
-       
+    # if it is a file
+    #    
     logger.info("Replacements done")
