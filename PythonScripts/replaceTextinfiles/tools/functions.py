@@ -63,6 +63,7 @@ def multipleReplace(data, vocabulary, strictPattern):
             pattern = re.compile(pattern)
             data = pattern.sub(uniqTerm, data)
     except TypeError as err:
+        print(vocabulary[uniqTerm])
         logger.err(err)
         sys.exit()
     return data
@@ -72,12 +73,13 @@ def runReplacing(args):
     inputDirectoryPath = args.i
     outputDirectoryPath = args.o
 
-    inputFilePath = args.f
-    outputFilePath = args.fo
+    # inputFilePath = args.f
+    # outputFilePath = args.fo
 
     vocabularyPath = args.c
 
-    strictPattern = args.p
+    # strictPattern = args.p
+    strictPattern = True
     # valid directory
     ValidInputDirectory = isValidDir(inputDirectoryPath)
     ValidOutputDirectory = isValidDir(outputDirectoryPath)
