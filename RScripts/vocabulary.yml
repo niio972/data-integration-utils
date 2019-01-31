@@ -285,6 +285,7 @@ hour:
 
 #VE_PotentielBaseMoyen ?
 #PotentielBaseMoy_VE?
+<<<<<<< HEAD
 
 ####################
 #PILOTYPE
@@ -623,9 +624,28 @@ value:
 operator:
 - operateur
 #date
+method:  
+- methode
+calcul
+observation
+Chambre à pression
+Pesee
+Comptage
+!!!
+Electrotitrimetrie
 
+
+hour:
+- heure 
+variableGroup: 
+- groupe_variables
+!!!!
 
 #enlever "pilotype"
 #enlever les colonnes suivantes en jaune
 #préciser ce qu'est un cépage, décrie données
 #expliciter le code / parent
+#colonnes à conserver:
+code, type, parent, date_debut, date_fin, description, surgreffage, label, systeme_irrigation, id, objet, variable, valeur, operateur, date, methode, groupe_variables, heure
+=======
+>>>>>>> d597a2d99e38ef41afee730db7e5d404f83b6a88

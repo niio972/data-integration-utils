@@ -241,8 +241,6 @@ berriesNumber:
   - NbBaies
 berriesWeight: 
   - PoidsBaies
-object: 
-  - objet
 value: 
   - valeur
 operator: 
@@ -291,7 +289,7 @@ unit:
 Chapitre:
   - 72-MOURVEDRE-ESP
 object:
-  - object
+  - objet
 objectType:
   - type
 objectParent:
@@ -303,8 +301,6 @@ midGrapeWeight:
   - PoidsMoyenGrappe
 grapeNumber:
   - NbGrappes
-totalAcidity:
-  - AciditeTotale
 flowering:
   - Floraison
 vineSpacing:
