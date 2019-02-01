@@ -10,6 +10,8 @@ Go to the directory:
 
 ## Install conda
 Get the latest version of miniconda at [miniconda](https://www.anaconda.com/download/#linux)
+
+**Go to the directory that you have download. Run in a shell**
 ```bash Miniconda*-Linux-x86_64.sh```
 
 ### Set environment
