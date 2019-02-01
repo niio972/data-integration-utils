@@ -291,3 +291,68 @@ malicAcid:
 - AcideMalique #g/l 
 lacticAcid: 
 - AcideLactique #g/l 
+
+experimentalSubplot:
+- sous-parcelle-experimentale
+#zone
+vineStock: 
+- cep
+#parent
+startDate: 
+- date_debut
+endDate: 
+date_fin
+#description
+doubleGrafting:
+- surgreffage 
+notIrrigated_invertin2013:
+- non irrigué inversé en 2013
+notIrrigated: 
+- non irrigué
+Irrigated_invertin2013thenOneRowDisplaced: 
+- Irrigué inversé en 2013 puis décalé de 1 rang
+
+irrigated: 
+- irrigué
+sapFlow: 
+- Flux de seve
+
+
+#label
+#repetition
+treatment: 
+- traitement
+
+irrigationSystem: 
+systeme_irrigation
+#id
+object: 
+- objet
+#variable
+value:
+- valeur
+operator:
+- operateur
+#date
+method:  
+- methode
+calcul
+observation
+Chambre à pression
+Pesee
+Comptage
+!!!
+Electrotitrimetrie
+
+
+hour:
+- heure 
+variableGroup: 
+- groupe_variables
+!!!!
+
+#enlever "pilotype"
+#enlever les colonnes suivantes en jaune
+#préciser ce qu'est un cépage, décrie données
+#expliciter le code / parent
+#colonnes à conserver:
