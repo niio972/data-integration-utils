@@ -336,23 +336,73 @@ operator:
 #date
 method:  
 - methode
-calcul
-observation
-Chambre à pression
-Pesee
-Comptage
-!!!
-Electrotitrimetrie
-
+calculation:
+- calcul
+#observation
+pressureChamber: 
+- Chambre à pression
+weight: 
+- Pesee
+abacus: 
+- Abaque
+enzymatic: 
+- Enzymatique
+counting: 
+- Comptage
+spectrophotometry: 
+- Spectrophotometrie
+massSpectrophotometry: 
+- SpectrometrieDeMasse
+electrotitrimetry: 
+- Electrotitrimetrie
+pHmetry: 
+- pHmetrie
+refractometry: 
+- Refractometrie
+gasChromatography_massSpectrometry: 
+- GC-MS
+liquidChromatographyMass: 
+- LC-MS
+highPerformanceLiquidChromatography: 
+- LC-MS-MS
+- HPLC-UV
 
 hour:
 - heure 
 variableGroup: 
 - groupe_variables
-!!!!
+cuttingWoodOneVineShootWeight:
+- BoisTaillePoids1Sarment
+phenology:
+- Phenologie
+meanBasePotential:
+- PotentielBaseMoy
+harvestBunchesNumber: 
+VendangesNbGrappes
+harvestWeight:
+- VendangesPoids
+cuttingWoodVineShootNumber: 
+- BoisTailleNbSarments
+cuttingWoodWeight: 
+- BoisTaillePoids
+cuttingWoodSensors:
+- BoisTailleCapteurs
+harvestSensors: 
+- VendangesCapteurs
+maturity: 
+- Maturite
+dailyTranspiration:
+- Transpiration_j
+fruitionVineShootsNumber:
+- FruitionNbSarment
+grapeAromaPrecursors: 
+- PrecurseurAromeRaisin
+#DeltaC13
+
 
 #enlever "pilotype"
 #enlever les colonnes suivantes en jaune
 #préciser ce qu'est un cépage, décrie données
 #expliciter le code / parent
 #colonnes à conserver:
+#code, type, parent, date_debut, date_fin, description, surgreffage, label, systeme_irrigation, id, objet, variable, valeur, operateur, date, methode, groupe_variables, heure
