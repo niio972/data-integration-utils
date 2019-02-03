@@ -11,7 +11,7 @@ if sys.version_info[0] < 3:
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", type=str,
-                    help="The path of the directory which contains the files to Format",
+                    help="The path of the file or the directory which contains the files to Format",
                     required=True)
 parser.add_argument("-o", type=str,
                     help="The path of the directory which will contains the formatted files",

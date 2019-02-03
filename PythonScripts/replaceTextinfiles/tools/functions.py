@@ -36,7 +36,6 @@ def isValidDir(directoryPath):
     else:
         return False
 
-
 def isValidFile(filePath):
     absoluteFilePath = os.path.abspath(filePath)
     if(os.path.exists(absoluteFilePath)):
@@ -44,14 +43,14 @@ def isValidFile(filePath):
     else:
         return False
 
-def createPatternFromWordList(wordsList,strictPattern):
-    if(strictPattern != True):
-        pattern = r"\b(?!(_|-))(" + r"|".join(wordsList)+ r")(?!(_|-))\b"
-    else :
-        pattern = r"\b(" + r"|".join(wordsList)+ r")\b"
+def isValidDirOrFile(path):
+   return isValidDir(path) or isValidFile(path)        
+
+def createPatternFromWordList(wordsList):
+    pattern = r"\b(?!(_|-))(" + r"|".join(wordsList)+ r")(?!(_|-))\b"
     return pattern
 
-def multipleReplace(data, vocabulary, strictPattern):
+def multipleReplace(data, vocabulary):
     """
     take a text and replace words that match the key in a dictionary
     with the associated value, return the changed text
@@ -59,7 +58,7 @@ def multipleReplace(data, vocabulary, strictPattern):
     # data = data.replace("_","").replace("-","")
     try:
         for uniqTerm in vocabulary:
-            pattern = createPatternFromWordList(vocabulary[uniqTerm],strictPattern)
+            pattern = createPatternFromWordList(vocabulary[uniqTerm])
             pattern = re.compile(pattern)
             data = pattern.sub(uniqTerm, data)
     except TypeError as err:
@@ -70,54 +69,53 @@ def multipleReplace(data, vocabulary, strictPattern):
 
 
 def runReplacing(args):
-    inputDirectoryPath = args.i
+    inputDirectoryOrFilePath = args.i
     outputDirectoryPath = args.o
-
-    # inputFilePath = args.f
-    # outputFilePath = args.fo
 
     vocabularyPath = args.c
 
-    # strictPattern = args.p
-    strictPattern = True
     # valid directory
-    ValidInputDirectory = isValidDir(inputDirectoryPath)
-    ValidOutputDirectory = isValidDir(outputDirectoryPath)
-    ValidVocabularyFile = isValidFile(vocabularyPath)
+    validInputFile = isValidDirOrFile(inputDirectoryOrFilePath)
+    validOutputDirectory = isValidDir(outputDirectoryPath)
+    validVocabularyFile = isValidFile(vocabularyPath)
 
-    if(not ValidInputDirectory):
-        logger.err(inputDirectoryPath + " is not a valid directory")
-    if(not ValidOutputDirectory):
+    if(not validInputFile):
+        logger.err(inputDirectoryOrFilePath + " is not a valid directory or file")
+    if(not validOutputDirectory):
         try:
             logger.info("Creating output directory :" + outputDirectoryPath)
             os.makedirs(outputDirectoryPath, exist_ok=True)
-            ValidOutputDirectory = True
+            validOutputDirectory = True
             logger.info("Directory created successfully :" +
                         outputDirectoryPath)
         except OSError as exc:  # Guard against race condition
             logger.err(outputDirectoryPath + " is not a valid directory")
 
-    if(not ValidVocabularyFile):
+    if(not validVocabularyFile):
         logger.err(vocabularyPath + " is not a valid file path")
 
-    if(not ValidInputDirectory or not ValidOutputDirectory or not ValidVocabularyFile):
+    if(not validInputFile or not validOutputDirectory or not validVocabularyFile):
         sys.exit()
 
-    AbsInputDirectoryPath = os.path.abspath(inputDirectoryPath)
-    AbsOutputDirectoryPath = os.path.abspath(outputDirectoryPath)
+    absInputFileOrDirectoryPath = os.path.abspath(inputDirectoryOrFilePath)
+    absOutputDirectoryPath = os.path.abspath(outputDirectoryPath)
     vocabulary = loadVocabularyFile(vocabularyPath)
 
-    # if it is a directory 
-    filenameList = os.listdir(os.path.abspath(AbsInputDirectoryPath))
+    if(isValidDir(absInputFileOrDirectoryPath)):
+        # if it is a directory 
+        filenameList = os.listdir(os.path.abspath(absInputFileOrDirectoryPath))
+    if(isValidFile(absInputFileOrDirectoryPath)):
+        # if it is a directory 
+        filenameList= [os.path.abspath(absInputFileOrDirectoryPath)]
 
     for filename in filenameList:
         if not filename.startswith('.'):
             logger.info("Replace terms in file "  + filename)
-            inputFilename = os.path.join(AbsInputDirectoryPath, filename)
-            outputFile = os.path.join(AbsOutputDirectoryPath, filename)
+            inputFilename = os.path.join(absInputFileOrDirectoryPath, filename)
+            outputFile = os.path.join(absOutputDirectoryPath, filename)
             with open(inputFilename,"r",encoding="utf8") as fileIn, open(outputFile,"w",encoding="utf8") as fileOut:
                 data = fileIn.read()
-                dataOut = multipleReplace(data, vocabulary,strictPattern)
+                dataOut = multipleReplace(data, vocabulary)
                 fileOut.write(dataOut)
     # if it is a file
     #    

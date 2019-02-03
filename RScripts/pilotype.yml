@@ -31,7 +31,7 @@ maximumHourlyWaterVaporDeficit:
   - VPDMax_j #kPa #Déficit de vapeur d'eau maximal journalier
 reliableTranspirationDataPercentage:
   - Trans_j_PourFiable #% #Pourcentage de données fiables de transpiration sur la période d'intégration
-DailyTranspirationConfidenceIndex:
+dailyTranspirationConfidenceIndex:
   - Trans_j_IndConf #n/a #indice de confiance sur la transpiration journalière 2: fiable 1: incertaine 0: à exclure l'indice est défini sur la plage [5-20h] (UTC). les flux forcés à 0 sont recherchés entre [8-18h] (UTC) nbInd_h_1+nbInd_h_2+nbDonneesManquantes+nbInd_h_-1 - < 5% -> 2 (fiable) - >= 5% & < 33% -> 1 (incertain) - >= %33 -> 0 (à exclure)
 # meanDailyTranspiration:
 # à supprimer, flux de sève  #-Trans_j #mm #Transpiration moyenne journalière. Intégration par trapèze sur la plage [5-20h] UTC.
@@ -125,11 +125,11 @@ thiolPrecursors_hexan1ol:
   - PT_G3MH #µg/l #gluthation-3MH
 dimethylsulfurPotential:
   - PDMS #µg eq DMS/l #potentiel en diméthylsulfure
-VineShootsNumber:
+vineShootsNumber:
   - NbSarments #n/a
-VineShootsNumberBeforeSensor:
+vineShootsNumberBeforeSensor:
   - NbSarmentAvantCapteur #n/a
-VineShootsNumberAfterSensor:
+vineShootsNumberAfterSensor:
   - NbSarmentApresCapteur #n/a
 bunchesNumber:
   - NbGrappes #n/a
@@ -186,7 +186,7 @@ hydroxycinnamicAcids_transCoutaricAcid:
   - HA_ACOU #mg/l #Acides hydroxycinnamiques Acide trans-coutarique
 hydroxycinnamicAcids_transCaftaricAcid:
   - HA_ACAF #mg/l #Acides hydroxycinnamiques Acide trans-caftarique
-GlucoseFructose:
+glucoseFructose:
   - GlucoseFructose #g/l
 glutathioneGSH_mol:
   - GSH_mol #umol/l (#2) #Glutathion
@@ -364,7 +364,6 @@ liquidChromatographyMass:
 highPerformanceLiquidChromatography:
   - LC-MS-MS
   - HPLC-UV
-
 hour:
   - heure
 variableGroup:
@@ -393,6 +392,10 @@ fruitionVineShootsNumber:
   - FruitionNbSarment
 grapeAromaPrecursors:
   - PrecurseurAromeRaisin
+observation:
+  - Observation
+computation:
+  - Calcul
 #DeltaC13
 
 #enlever "pilotype"
