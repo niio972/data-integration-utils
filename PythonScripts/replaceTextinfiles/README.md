@@ -23,16 +23,21 @@ Get the latest version of miniconda at [miniconda](https://www.anaconda.com/down
 
 ## Run script
 
-**usage** : ```replaceStrings.py [-h] -i I -o O -c C [-v]```
+**usage** : ```python replaceStrings.py [-h] -i I -o O -c C [C ...] [-p] [-v]```
 
 **optional arguments**:
-  ```
-  -h, --help     show this help message and exit
-  -i I           The path of the directory which contains the files to Format
-  -o O           The path of the directory which will contains the formatted
-                 files
-  -c C           The path of yml vocabulary file
-  -v, --verbose  increase output verbosity
+  ```bash
+  optional arguments:
+  -h, --help            show this help message and exit
+  -i I                  The path of the file or the directory which contains
+                        the files to Format
+  -o O                  The path of the directory which will contains the
+                        formatted files
+  -c C [C ...]          The path of yaml vocabulary file(s)
+  -p, --nostrictpattern
+                        if pattern is use to replace complex string, true by
+                        default
+  -v, --verbose         increase output verbosity
   ```
 
 ### Example :
@@ -55,6 +60,10 @@ soilType:
 object, type, soilType
 plantOne, plant, clay
 ```
-**Example run** : 
+**Command line examples** : 
 
-```python replaceStrings.py -i ./transf -o ./output -c ./vocabulary.yml```
+```python replaceStrings.py -i ./transf -o ./output -c ./vocabulary1.yml ```
+
+```python replaceStrings.py -i ./file.csv -o ./output -c ./vocabulary1.yml ```
+
+```python replaceStrings.py -i ./transf -o ./output -c ./vocabulary1.yml ./vocabulary2.yml```
