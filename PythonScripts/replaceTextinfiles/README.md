@@ -41,24 +41,31 @@ Get the latest version of miniconda at [miniconda](https://www.anaconda.com/down
   ```
 
 ### Example :
-**Exemple of text file :**
-```
-object, type, type_sol
-plantOne, plant, clay
-```
-**Exemple of vocabulary file** :
 
-Transform **type_sol** and  **type_sol3** in __**SoilType**__.
+**Example of text file :**
+```
+object, type, type_sol 
+plantOne, plant, test
+plantTwo, plant, test3
+```
+**Example of vocabulary file** :
+
+Transform **test** and  **testl3** in __**field**__.
+Transform **type_sol** in __**soilType**__.
 
 ```yaml
 soilType:
   - type_sol # soil type of plant
-  #- type_sol3
+field:
+  - test 
+  - test3 # multiple match available
+
 ```
 **Exemple of result :**
 ```
-object, type, soilType
-plantOne, plant, clay
+object, type, soilType 
+plantOne, plant, field
+plantTwo, plant, field
 ```
 **Command line examples** : 
 
